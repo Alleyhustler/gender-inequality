@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif; 
+    background-image: url('images/man.jpg'); /* Replace with the path to your image */
+    background-size: cover; /* Ensure full background cover */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    color: #fff; /* Text color */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    background-color: #bc8423cc); /* Transparent dark grey */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.header-left {
+    font-weight: 900;
+    color: #fff;
+}
+
+.header-center a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.header-right .social-icon {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.image-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 80px; /* Adjust to avoid overlap with fixed header */
+}
+
+.image-section img {
+    max-width: 280px;
+    height: auto;
+    border-radius: 15px;
+    border: 5px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-section img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.change-mediator-btn {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+    margin: 40px auto; /* Center grid */
+    max-width: 1000px; /* Limit grid width */
+}
+
+.grid-item {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.parallax-section {
+    background-image: url('\ man.jpg'); /* Add your background image */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+
+.parallax-section h1 {
+    font-size: 3em;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 4px 6px #bc8423cc;
+    letter-spacing: 2px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-section {
+    background-color: #bc8423cc;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 0;
+    max-width: 800px;
+    margin: 40px auto; /* Center content and remove extra top space */
+}
+
+.content-section p {
+    font-size: 1.5em;
+    line-height: 1.6em;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+    }
+
+    .parallax-section h1 {
+        font-size: 2.2em; /* Smaller text on mobile */
+    }
+
+    .content-section p {
+        font-size: 1.2em;
+    }
+}
